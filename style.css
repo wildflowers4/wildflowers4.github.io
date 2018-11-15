@@ -1,0 +1,215 @@
+/* COLOUR PALETTE:
+  Black-ish: #1d1e18
+  Blue-ish: #084c61
+  Purple-ish: #776471
+  Pink-ish: #edafb8
+  White-ish: #eef0f2
+*/
+
+
+/* INCLUDE PADDING AND MARGIN IN BOX SIZING ===========================*/
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+/* STYLE FOR ENTIRE PAGE ============*/
+body{
+  font-size: 15px;
+  color: #1d1e18;
+  background: #eef0f2;
+  padding: 0px;
+  margin: 0px;
+}
+
+.TITLE, p, ul, ol{
+  margin: 0px;
+  padding: 15px;
+}
+
+
+/* HYPERLINKS ================*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* a:visited{
+  color: #1d1e18;
+} */
+
+a:hover {
+  color: #edafb8;
+}
+
+
+/* NAV & FOOTER ============*/
+.edge-section{
+  color: #eef0f2;
+  background: #776471;
+  margin: 0px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 20px;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+nav ul li{
+  /* background: #084c61; */
+  margin: 0px 15px;
+}
+
+.logo{
+  height: 40px;
+  margin:0px;
+}
+
+.divide{
+  background: #edafb8;
+  margin:0px auto;
+  height: 30px;
+}
+
+
+/* TITLE BOX / HEADER ================*/
+header{
+  background: #084c61;
+  text-align: center;
+}
+
+.content{
+  width: 90%;
+  margin: 0px auto;
+}
+
+#main-title{
+  font-size: 2.5rem;
+  font-family: 'Cedarville Cursive', cursive;
+  color: #edafb8;
+}
+
+#tagline{
+  color: #eef0f2;
+  padding-top: 0px;
+}
+
+
+/*FIRST SECTION ================*/
+#intro-section{
+  margin: 30px;
+}
+
+.intro{
+  /* background: #084c61; */
+  display: inline-block;
+  margin: 15px;
+}
+
+#divider-img{
+  height: 90px;
+}
+
+#intro-text p{
+  height: 90px;
+}
+
+
+/*POSTS SECTION ================*/
+#posts{
+  width: 90%;
+  margin: 30px;
+}
+
+#post-images{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-item: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.post-pic{
+  height:90px;
+}
+
+
+/*HIDE HAMBURGER MENU UNICODE ITEMS WHEN WINDOW IS LARGE ==============*/
+
+.hamburger, .close {
+  display: none;
+}
+
+
+/*RESPONSIVE STYLING - FOR SMALLER WINDOWS ==================*/
+@media(max-width: 650px){
+
+  /* SHOW HAMBURGER MENU */
+  .hamburger, .close {
+    font-size: 30px;
+    font-family: serif;
+    display: block;
+    color: #eef0f2;
+    margin: 0px;
+    padding: 7.5px;
+  }
+
+  .hamburger {
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .hamburger span{
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 15px;
+    display: inline-block;
+    align-content: flex-start;
+  }
+
+  /* HIDE REGULAR MENU */
+  .main-nav {
+  	position: fixed;
+  	top: -100vh;
+  }
+
+  /*SHOW MENU WHEN BURGER IS CLICKED */
+  .main-nav.open-nav {
+    top: 0;
+  	/* right: 20px; */
+  	padding: 15px;
+  	background: #776471;
+  	width: 100%;
+  }
+
+  nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  nav ul li{
+    /* background: #084c61; */
+    margin: 7.5px 0px;
+  }
+
+  nav ul li:last-child{
+    /* background: #084c61; */
+    margin-bottom: 15px;
+  }
+}
